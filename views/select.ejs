@@ -1,0 +1,20 @@
+<h1>All User Select</h1>
+
+<a href="/form">İnsert Form</a>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+    </tr>
+    <% user.forEach(function(item) { %>
+    <tr>
+        <td><%= item.id %></td>
+        <td><%= item.name %></td>
+        <td><%= item.age %></td>
+        <td><a href="/delete?id=<%= item.id %>" onClick="return confirm('Are you sure ?');">Delete</a></td>
+        <td><a href="/update?id=<%= item.id %>">Update</a></td>
+    </tr>
+    <% }); %>
+</table>
